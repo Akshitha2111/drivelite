@@ -1,0 +1,698 @@
+### =========================
+### USER APIs
+### =========================
+
+### Create User
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Akshitha",
+  "email": "akshitha@gmail.com"
+}
+
+
+### Get All Users
+GET http://localhost:8080/users
+
+
+### Get User By ID
+GET http://localhost:8080/users/1
+
+
+### Delete User
+DELETE http://localhost:8080/users/2
+
+
+### Check Users After Delete
+GET http://localhost:8080/users
+
+
+### Update User
+PUT http://localhost:8080/users/1
+Content-Type: application/json
+
+{
+  "name": "Akshitha Updated",
+  "email": "updated@gmail.com"
+}
+
+
+### Check Updated User
+GET http://localhost:8080/users/1
+
+
+
+### =========================
+### VEHICLE APIs
+### =========================
+
+
+### Create Vehicle
+POST http://localhost:8080/vehicles
+Content-Type: application/json
+
+{
+  "id": 1,
+  "vehicleName": "Toyota Innova",
+  "vehicleType": "Car",
+  "model": "2024",
+  "numberPlate": "AP39AB1234",
+  "pricePerDay": 2500,
+  "available": true
+}
+
+
+### Get All Vehicles
+GET http://localhost:8080/vehicles
+
+
+### Get Vehicle By ID
+GET http://localhost:8080/vehicles/1
+
+
+### Update Vehicle
+PUT http://localhost:8080/vehicles/1
+Content-Type: application/json
+
+{
+  "vehicleName": "Toyota Innova Updated",
+  "vehicleType": "Car",
+  "model": "2025",
+  "numberPlate": "AP39AB1234",
+  "pricePerDay": 3000,
+  "available": true
+}
+
+
+### Check Updated Vehicle
+GET http://localhost:8080/vehicles/1
+
+
+### Delete Vehicle
+DELETE http://localhost:8080/vehicles/1
+
+
+### Check Vehicles After Delete
+GET http://localhost:8080/vehicles
+
+
+### Get All Vehicles
+GET http://localhost:8080/vehicles
+
+
+### Create Booking
+
+POST http://localhost:8080/bookings
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "vehicleId": 1,
+  "startDate": "2026-07-10",
+  "endDate": "2026-07-15"
+}
+
+
+
+### =========================
+### BOOKING APIs
+### =========================
+
+
+### Get All Bookings
+GET http://localhost:8080/bookings
+
+
+### Get Booking By ID
+GET http://localhost:8080/bookings/1
+
+###
+GET http://localhost:8080/vehicles/1
+
+
+
+### =========================
+### BOOKING APIs
+### =========================
+
+
+### Create Booking
+POST http://localhost:8080/bookings
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "vehicleId": 1,
+  "startDate": "2026-07-10",
+  "endDate": "2026-07-15"
+}
+
+
+### Get All Bookings
+GET http://localhost:8080/bookings
+
+
+### Get Booking By ID
+GET http://localhost:8080/bookings/1
+
+###
+POST http://localhost:8080/bookings
+Content-Type: application/json
+
+{
+  "userId":1,
+  "vehicleId":1,
+  "startDate":"2026-07-10",
+  "endDate":"2026-07-15"
+}
+
+
+### Delete Booking
+
+DELETE http://localhost:8080/bookings/2
+
+
+### Check Bookings After Delete
+
+GET http://localhost:8080/bookings
+###
+
+GET http://localhost:8080/bookings
+
+###
+PUT http://localhost:8080/bookings/1
+Content-Type: application/json
+
+{
+    "startDate":"2026-07-12",
+    "endDate":"2026-07-18"
+}
+
+
+###
+GET http://localhost:8080/bookings/1
+
+###
+GET http://localhost:8080/users
+
+###
+GET http://localhost:8080/users/1
+###
+
+
+GET http://localhost:8080/bookings
+
+###
+
+GET http://localhost:8080/bookings/1
+
+###
+
+PUT http://localhost:8080/bookings/1/cancel
+
+
+###
+GET http://localhost:8080/bookings/3
+
+###
+GET http://localhost:8080/vehicles/1
+
+###
+POST http://localhost:8080/bookings
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "vehicleId": 1,
+  "startDate": "2026-07-20",
+  "endDate": "2026-07-25"
+}
+
+
+###
+PUT http://localhost:8080/bookings/3/complete
+
+###
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Rahul",
+  "email": "rahul@gmail.com",
+  "phone": "9876543210"
+}
+
+
+###
+GET http://localhost:8080/users
+
+###
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Ravi",
+  "email": "ravi@gmail.com",
+  "phone": "12345"
+}
+
+
+###
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Ravi",
+  "email": "ravi@gmail.com",
+  "phone": "12345"
+}
+
+###
+POST http://localhost:8080/bookings
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "vehicleId": 1,
+  "startDate": "2026-07-25",
+  "endDate": "2026-07-20"
+}
+
+
+###
+GET http://localhost:8080/vehicles/type/Car
+
+###
+GET http://localhost:8080/vehicles/available
+
+###
+GET http://localhost:8080/vehicles/price?min=1000&max=3000
+
+###
+GET http://localhost:8080/vehicles/price?min=5000&max=10000
+
+###
+GET http://localhost:8080/dashboard
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "akshitha@gmail.com",
+  "password": "password123"
+}
+
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "akshitha@gmail.com",
+  "password": "wrongpassword"
+}
+
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "12345"
+}
+
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email":"akshitha@gmail.com",
+  "password":"wrong123"
+}
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email":"akshitha@gmail.com",
+  "password":"password123"
+}
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "akshitha@gmail.com",
+  "password": "password123"
+}
+
+###
+GET http://localhost:8080/vehicles
+
+### Login
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "akshitha@gmail.com",
+  "password": "password123"
+}
+
+
+### Get Vehicles with JWT
+GET http://localhost:8080/vehicles
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM0NTU4ODIsImV4cCI6MTc4MzU0MjI4Mn0.5qVbqCePHBENphfk_YpMFjAhNByoiX4GfA_-oJP5xuLgDSAVEYt709bOrZWiP4g5
+
+
+### Login
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "akshitha@gmail.com",
+  "password": "password123"
+}
+
+
+### Add Vehicle
+POST http://localhost:8080/vehicles
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM0NTc0NDEsImV4cCI6MTc4MzU0Mzg0MX0.LjSSUFVNgCF3Av_1DKcdGWk53aLp16p37FLprcLj5Hd_WURe7ymHW5sWpMYpLiA8
+Content-Type: application/json
+
+{
+  "vehicleName": "Mahindra XUV700",
+  "vehicleType": "SUV",
+  "model": "2025",
+  "numberPlate": "AP39EF1234",
+  "pricePerDay": 3500,
+  "available": true
+}
+
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "akshitha@gmail.com",
+  "password": "password123"
+}
+
+###
+GET http://localhost:8080/hello
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "akshitha@gmail.com",
+  "password": "password123"
+}
+
+###
+GET http://localhost:8080/hello
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM0NTkwMTQsImV4cCI6MTc4MzU0NTQxNH0.9zY7-4DxNJBNhYd8WGA3UA9ptpd7cfok5nQuD8EACOwd0x2O2dTAZEDsxsF0dmLZ
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "akshitha@gmail.com",
+  "password": "password123"
+}
+
+###
+GET http://localhost:8080/users/profile
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MDczNDEsImV4cCI6MTc4MzU5Mzc0MX0.geYtePnww3U8jKcNR8tNSRh_4CU7ti14Wl1XuhJU1mAAV3qHRSV4xRSzjiszJFZO
+
+###
+PUT http://localhost:8080/users/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MDczNDEsImV4cCI6MTc4MzU5Mzc0MX0.geYtePnww3U8jKcNR8tNSRh_4CU7ti14Wl1XuhJU1mAAV3qHRSV4xRSzjiszJFZO
+
+{
+  "name": "Akshitha S",
+  "phone": "9999999999"
+}
+
+###
+GET http://localhost:8080/users/profile
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MDczNDEsImV4cCI6MTc4MzU5Mzc0MX0.geYtePnww3U8jKcNR8tNSRh_4CU7ti14Wl1XuhJU1mAAV3qHRSV4xRSzjiszJFZO
+
+###
+POST http://localhost:8080/users/register
+Content-Type: application/json
+
+{
+  "name": "Rahul",
+  "email": "rahul@gmail.com",
+  "phone": "9876543210",
+  "password": "rahul123"
+}
+
+
+###
+GET http://localhost:8080/users/profile
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyYWh1bEBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MDc4MTAsImV4cCI6MTc4MzU5NDIxMH0.cP_6rUNmPvTgqrpXOo6_mjIIugq6DaT6ZC7Isx4AnxjjiBJZL7RQ61ttYd9RWF22
+
+
+###
+POST http://localhost:8080/users/register
+Content-Type: application/json
+
+{
+  "name":"Akshitha",
+  "email":"akshitha@gmail.com",
+  "phone":"9876543210",
+  "password":"akshitha123"
+}
+
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email":"akshitha@gmail.com",
+  "password":"akshitha123"
+}
+
+
+###
+GET http://localhost:8080/users/profile
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MDg5MDEsImV4cCI6MTc4MzU5NTMwMX0.LTfSlZdeNhYCrzA3zD1hRw_kTditYT8q0ukwekPFRmoOUyY7andppid1NrWrfvGn
+
+###
+POST http://localhost:8080/users/register
+Content-Type: application/json
+
+{
+  "name":"Rahul",
+  "email":"rahul@gmail.com",
+  "phone":"9876543210",
+  "password":"rahul123"
+}
+
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email":"akshitha@gmail.com",
+  "password":"akshitha123"
+}
+
+
+###
+POST http://localhost:8080/vehicles
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTA2ODksImV4cCI6MTc4MzU5NzA4OX0.IAkgPZYTDfE4O0I37qveMvNhpUcxb5O6PfyTE8fz0TN0RWBg4jleWLWpsEiCINdC
+Content-Type: application/json
+
+{
+  "vehicleName":"Honda Activa",
+  "vehicleType":"Bike",
+  "model":"2024",
+  "numberPlate":"AP39AB1234",
+  "pricePerDay":500,
+  "available":true
+}
+
+###
+DELETE http://localhost:8080/vehicles/1
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTA2ODksImV4cCI6MTc4MzU5NzA4OX0.IAkgPZYTDfE4O0I37qveMvNhpUcxb5O6PfyTE8fz0TN0RWBg4jleWLWpsEiCINdC
+
+###
+PUT http://localhost:8080/vehicles/1
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTA2ODksImV4cCI6MTc4MzU5NzA4OX0.IAkgPZYTDfE4O0I37qveMvNhpUcxb5O6PfyTE8fz0TN0RWBg4jleWLWpsEiCINdC
+Content-Type: application/json
+
+{
+  "vehicleName":"Honda Activa 125",
+  "vehicleType":"Bike",
+  "model":"2025",
+  "numberPlate":"AP39AB1234",
+  "pricePerDay":650,
+  "available":true
+}
+
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "akshitha@gmail.com",
+  "password": "akshitha123"
+}
+
+###
+GET http://localhost:8080/vehicles
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTcwNTAsImV4cCI6MTc4MzYwMzQ1MH0.Qkm8byxWBCaESlF6LQs7PlLUVWyyuZ-F8Wj39EWTu18cBLrbFSvUDoCdR2lEOIAG
+
+###
+POST http://localhost:8080/vehicles
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTcwNTAsImV4cCI6MTc4MzYwMzQ1MH0.Qkm8byxWBCaESlF6LQs7PlLUVWyyuZ-F8Wj39EWTu18cBLrbFSvUDoCdR2lEOIAG
+Content-Type: application/json
+
+{
+  "vehicleName":"Honda Activa",
+  "vehicleType":"Bike",
+  "model":"2025",
+  "numberPlate":"AP39AB1234",
+  "pricePerDay":500,
+  "available":true
+}
+
+###
+GET http://localhost:8080/vehicles
+Authorization: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTcwNTAsImV4cCI6MTc4MzYwMzQ1MH0.Qkm8byxWBCaESlF6LQs7PlLUVWyyuZ-F8Wj39EWTu18cBLrbFSvUDoCdR2lEOIAG
+
+###
+POST http://localhost:8080/bookings
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTcwNTAsImV4cCI6MTc4MzYwMzQ1MH0.Qkm8byxWBCaESlF6LQs7PlLUVWyyuZ-F8Wj39EWTu18cBLrbFSvUDoCdR2lEOIAG
+Content-Type: application/json
+
+{
+  "userId":6,
+  "vehicleId":1,
+  "startDate":"2026-07-10",
+  "endDate":"2026-07-15"
+}
+
+###
+@token = eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTcwNTAsImV4cCI6MTc4MzYwMzQ1MH0.Qkm8byxWBCaESlF6LQs7PlLUVWyyuZ-F8Wj39EWTu18cBLrbFSvUDoCdR2lEOIAG
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email":"akshitha@gmail.com",
+  "password":"akshitha123"
+}
+
+###
+GET http://localhost:8080/vehicles
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTc1NTgsImV4cCI6MTc4MzYwMzk1OH0.MWFjYsmxn8wEYl9NkKabubuJIwEcXdZqleJ0MGTsrEEW1vyeIeNN4cCWc7cCigjL
+
+###
+POST http://localhost:8080/vehicles
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTgzMzYsImV4cCI6MTc4MzYwNDczNn0.CQE-0q61Qpeetk3X5q8pmWZe5dP0IUVObK5Xkouos_zwLmJGpvXmlef2aFVoGNCv
+Content-Type: application/json
+
+{
+  "vehicleName":"Honda Activa",
+  "vehicleType":"Bike",
+  "model":"2025",
+  "numberPlate":"AP39AB1234",
+  "pricePerDay":500,
+  "available":true
+}
+
+###
+POST http://localhost:8080/bookings
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTgzMzYsImV4cCI6MTc4MzYwNDczNn0.CQE-0q61Qpeetk3X5q8pmWZe5dP0IUVObK5Xkouos_zwLmJGpvXmlef2aFVoGNCv
+Content-Type: application/json
+
+{
+  "vehicleId":5,
+  "startDate":"2026-07-10",
+  "endDate":"2026-07-12"
+}
+
+###
+DELETE http://localhost:8080/bookings/3
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MTgzMzYsImV4cCI6MTc4MzYwNDczNn0.CQE-0q61Qpeetk3X5q8pmWZe5dP0IUVObK5Xkouos_zwLmJGpvXmlef2aFVoGNCv
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "akshitha@gmail.com",
+  "password": "akshitha123"
+}
+
+
+###
+GET http://localhost:8080/users/profile
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MzQ5OTUsImV4cCI6MTc4MzYyMTM5NX0.oai_8vL-mJ31PMDNbXqhumWDqSXYsKUs_r1q51XhbDVIYJnKSzRe22XMnAkHX7Ti
+
+###
+PUT http://localhost:8080/users/profile
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1MzQ5OTUsImV4cCI6MTc4MzYyMTM5NX0.oai_8vL-mJ31PMDNbXqhumWDqSXYsKUs_r1q51XhbDVIYJnKSzRe22XMnAkHX7Ti
+Content-Type: application/json
+
+{
+  "name":"Akshitha",
+  "phone":"9999999999"
+}
+
+###
+GET http://localhost:8080/vehicles
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "akshitha@gmail.com",
+  "password": "akshitha123"
+}
+
+###
+http://localhost:8080/admin/users
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYUBnbWFpbC5jb20iLCJpYXQiOjE3ODM1Mzc3ODYsImV4cCI6MTc4MzYyNDE4Nn0.0LbjvHrqLmCLe2-xJ1WKpdp8dgNrQmr8CxZ4f68zUzApUoowDlZbMtlhVXcvF1eW
+
+###
+POST http://localhost:8080/users/register
+Content-Type: application/json
+
+{
+  "name": "",
+  "email": "abc",
+  "password": "12",
+  "phone": "123"
+}
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@drivelite.com",
+  "password": "admin123"
+}
+
+###
+GET http://localhost:8080/admin/bookings
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYTFAZ21haWwuY29tIiwiaWF0IjoxNzg0MzA0OTM2LCJleHAiOjE3ODQzOTEzMzZ9.4R9XKlQpno9kB4Avm_1TS48-BT7PDX6rK2pREzkNOTJBmLJ7-hkeAw2e71cAYLTs
+
