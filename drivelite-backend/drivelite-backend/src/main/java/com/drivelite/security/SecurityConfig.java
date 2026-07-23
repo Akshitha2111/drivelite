@@ -13,7 +13,6 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-
 import java.util.List;
 
 @Configuration
@@ -43,7 +42,6 @@ public class SecurityConfig {
                 // Authorization Rules
                 .authorizeHttpRequests(auth -> auth
 
-                        // Public APIs
                         .requestMatchers(
                                 "/",
                                 "/error",
@@ -51,13 +49,7 @@ public class SecurityConfig {
                                 "/users/register",
                                 "/vehicles/**"
                         ).permitAll()
-                        .anyRequest().authenticated()
 
-
-                        // Error Page
-                        .requestMatchers("/error").permitAll()
-
-                        // Secure everything else
                         .anyRequest().authenticated()
                 )
 
