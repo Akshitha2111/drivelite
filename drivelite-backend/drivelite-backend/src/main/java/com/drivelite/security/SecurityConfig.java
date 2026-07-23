@@ -45,9 +45,13 @@ public class SecurityConfig {
 
                         // Public APIs
                         .requestMatchers(
-                                "/auth/login",
-                                "/users/register"
+                                "/",
+                                "/error",
+                                "/auth/**",
+                                "/users/register",
+                                "/vehicles/**"
                         ).permitAll()
+                        .anyRequest().authenticated()
 
 
                         // Error Page
