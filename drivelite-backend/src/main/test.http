@@ -15,3 +15,12 @@ Content-Type: application/json
   "email":"akshitha@gmail.com",
   "password":"wrong"
 }
+
+### Login
+POST https://drivelite-backend.onrender.com/auth/login
+Content-Type: application/json
+
+{
+  "email": "seelamakshitha01@gmail.com",
+  "password": "Girish@110108"
+}

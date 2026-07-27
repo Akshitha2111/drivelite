@@ -696,3 +696,13 @@ Content-Type: application/json
 GET http://localhost:8080/admin/bookings
 Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJha3NoaXRoYTFAZ21haWwuY29tIiwiaWF0IjoxNzg0MzA0OTM2LCJleHAiOjE3ODQzOTEzMzZ9.4R9XKlQpno9kB4Avm_1TS48-BT7PDX6rK2pREzkNOTJBmLJ7-hkeAw2e71cAYLTs
 
+### Register User
+POST https://drivelite-backend.onrender.com/users/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@drivelite.com",
+  "phone": "9876543210",
+  "password": "test123"
+}
