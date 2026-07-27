@@ -4,7 +4,6 @@ const api = axios.create({
     baseURL: "https://drivelite-backend.onrender.com"
 });
 
-// Automatically attach JWT to every request
 api.interceptors.request.use((config) => {
 
     const token = localStorage.getItem("token");
