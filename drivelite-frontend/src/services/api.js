@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:8080"
+    baseURL: "https://drivelite-backend.onrender.com"
 });
 
 // Automatically attach JWT to every request
