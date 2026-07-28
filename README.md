@@ -1,5 +1,13 @@
 # DriveLite AI Enhanced Vehicle Rental System 🚗
 
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5-green)
+![React](https://img.shields.io/badge/React-Vite-blue)
+![Python](https://img.shields.io/badge/Python-3.12-yellow)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
+![AI](https://img.shields.io/badge/AI-Random%20Forest-purple)
+![Deployment](https://img.shields.io/badge/Deployed-Render-success)
+
 An AI-powered full-stack vehicle rental platform that provides vehicle browsing, booking management, and intelligent vehicle recommendations based on user preferences.
 
 ## 🌐 Live Demo
@@ -70,23 +78,70 @@ https://drivelite-ai-service.onrender.com
 
 # System Architecture
 
-User
-|
-↓
-React Frontend
-|
-↓
-Spring Boot Backend
-|
-├── MySQL Database
-|
-↓
-Flask AI Microservice
-|
-↓
-Machine Learning Recommendation Model
+                User
+                  |
+                  |
+          React Frontend
+          (Vite + Axios)
+                  |
+                  |
+         Spring Boot Backend
+                  |
+    ----------------------------
+    |                          |
+    |                          |
+ MySQL Database        AI Recommendation Service
+                        (Flask + ML Model)
 
 
+## API Documentation
+
+### Authentication APIs
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/auth/register` | Register a new user |
+| POST | `/auth/login` | Login user and generate JWT token |
+
+---
+
+### Vehicle APIs
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/vehicles` | Get all available vehicles |
+| GET | `/vehicles/{id}` | Get vehicle by ID |
+| POST | `/vehicles` | Add new vehicle (Admin) |
+| PUT | `/vehicles/{id}` | Update vehicle details |
+| DELETE | `/vehicles/{id}` | Delete vehicle |
+
+---
+
+### Booking APIs
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/bookings` | Create a vehicle booking |
+| GET | `/bookings/my` | View user's bookings |
+| PUT | `/bookings/{id}/cancel` | Cancel booking |
+
+---
+
+### AI Recommendation API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/ai/recommend` | Get AI-based vehicle recommendations |
+
+Example Request:
+
+```json
+{
+  "budget": 500,
+  "vehicleType": "Scooter",
+  "duration": 3,
+  "purpose": "Daily commute"
+}
 ---
 
 # AI Recommendation Flow
@@ -172,3 +227,23 @@ http://localhost:5000
 ## Author
 
 Akshitha2111
+
+## Screenshots
+
+### Home Page
+![Home Page](Screenshots/home.png)
+
+### Register Page
+![Register Page](Screenshots/register.png)
+
+### Login Page
+![Login Page](Screenshots/login.png)
+
+### Vehicle Booking
+![Booking](Screenshots/booking.png)
+
+### My Bookings
+![My Bookings](Screenshots/my-bookings.png)
+
+### AI Recommendation
+![AI Recommendation](Screenshots/ai-recommendation.png)
