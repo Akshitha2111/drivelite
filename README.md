@@ -172,3 +172,23 @@ http://localhost:5000
 ## Author
 
 Akshitha2111
+
+## Screenshots
+
+### Home Page
+![Home Page](Screenshots/home.png)
+
+### Register Page
+![Register Page](Screenshots/register.png)
+
+### Login Page
+![Login Page](Screenshots/login.png)
+
+### Vehicle Booking
+![Booking](Screenshots/booking.png)
+
+### My Bookings
+![My Bookings](Screenshots/my-bookings.png)
+
+### AI Recommendation
+![AI Recommendation](Screenshots/ai-recommendation.png)
