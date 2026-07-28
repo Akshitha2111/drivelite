@@ -1,5 +1,13 @@
 # DriveLite AI Enhanced Vehicle Rental System 🚗
 
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5-green)
+![React](https://img.shields.io/badge/React-Vite-blue)
+![Python](https://img.shields.io/badge/Python-3.12-yellow)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
+![AI](https://img.shields.io/badge/AI-Random%20Forest-purple)
+![Deployment](https://img.shields.io/badge/Deployed-Render-success)
+
 An AI-powered full-stack vehicle rental platform that provides vehicle browsing, booking management, and intelligent vehicle recommendations based on user preferences.
 
 ## 🌐 Live Demo
@@ -70,21 +78,20 @@ https://drivelite-ai-service.onrender.com
 
 # System Architecture
 
-User
-|
-↓
-React Frontend
-|
-↓
-Spring Boot Backend
-|
-├── MySQL Database
-|
-↓
-Flask AI Microservice
-|
-↓
-Machine Learning Recommendation Model
+                User
+                  |
+                  |
+          React Frontend
+          (Vite + Axios)
+                  |
+                  |
+         Spring Boot Backend
+                  |
+    ----------------------------
+    |                          |
+    |                          |
+ MySQL Database        AI Recommendation Service
+                        (Flask + ML Model)
 
 
 ---
