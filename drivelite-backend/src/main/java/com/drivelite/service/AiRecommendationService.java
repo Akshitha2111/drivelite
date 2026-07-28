@@ -216,13 +216,13 @@ public class AiRecommendationService {
                 );
 
             } catch (RestClientException ex) {
+
                 System.err.println("========== AI SERVICE ERROR ==========");
+                System.err.println("URL: " + aiServiceUrl + "/predict");
                 ex.printStackTrace();
-                System.err.println("AI URL: " + aiServiceUrl + "/predict");
                 System.err.println("======================================");
 
                 if (attempt == 2) {
-
                     throw new AiServiceException(
                             "Unable to reach the AI recommendation service. Please try again later.",
                             ex
