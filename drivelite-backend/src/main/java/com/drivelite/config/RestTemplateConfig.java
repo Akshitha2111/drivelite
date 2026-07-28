@@ -1,28 +1,21 @@
 package com.drivelite.config;
 
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
-import java.time.Duration;
-
-/**
- * Provides a single, shared RestTemplate bean used by
- * AiRecommendationService to call the Flask AI microservice.
- *
- * Timeouts are kept short since this is an internal service-to-service
- * call on localhost, not a call to an external third party API.
- */
 @Configuration
 public class RestTemplateConfig {
 
     @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+    public RestTemplate restTemplate() {
 
-        return builder
-                .connectTimeout(Duration.ofSeconds(5))
-                .readTimeout(Duration.ofSeconds(10))
-                .build();
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+
+        factory.setConnectTimeout(30000);
+        factory.setReadTimeout(30000);
+
+        return new RestTemplate(factory);
     }
 }

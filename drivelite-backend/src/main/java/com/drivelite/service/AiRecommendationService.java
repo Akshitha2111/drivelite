@@ -205,20 +205,34 @@ public class AiRecommendationService {
     // Calls the Flask AI microservice and handles connectivity failures
     private AiPredictionResponse callAiService(AiPredictionRequest requestBody) {
 
-        try {
+        for (int attempt = 1; attempt <= 2; attempt++) {
 
-            return restTemplate.postForObject(
-                    aiServiceUrl + "/predict",
-                    requestBody,
-                    AiPredictionResponse.class
-            );
+            try {
 
-        } catch (RestClientException ex) {
+                return restTemplate.postForObject(
+                        aiServiceUrl + "/predict",
+                        requestBody,
+                        AiPredictionResponse.class
+                );
 
-            throw new AiServiceException(
-                    "Unable to reach the AI recommendation service. Please try again later.",
-                    ex
-            );
+            } catch (RestClientException ex) {
+
+                if (attempt == 2) {
+
+                    throw new AiServiceException(
+                            "Unable to reach the AI recommendation service. Please try again later.",
+                            ex
+                    );
+                }
+
+                try {
+                    Thread.sleep(8000);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
         }
+
+        throw new AiServiceException("AI recommendation failed.");
     }
 }
