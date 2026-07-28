@@ -701,8 +701,41 @@ POST https://drivelite-backend.onrender.com/users/register
 Content-Type: application/json
 
 {
+  "name": "Tester User",
+  "email": "test2@drivelite.com",
+  "phone": "9876543218",
+  "password": "test12345"
+}
+
+###
+POST https://drivelite-backend.onrender.com/auth/login
+###
+POST http://localhost:8080/users/register
+Content-Type: application/json
+
+{
   "name": "Test User",
-  "email": "test@drivelite.com",
+  "email": "test2@drivelite.com",
   "phone": "9876543210",
-  "password": "test123"
+  "password": "password123"
+}
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "test2@drivelite.com",
+  "password": "password123"
+}
+
+###
+POST http://localhost:8080/ai/recommend
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0MkBkcml2ZWxpdGUuY29tIiwiaWF0IjoxNzg1MjUyNDE0LCJleHAiOjE3ODUzMzg4MTR9.3mysBPYENzvaq79yFZw4Rd4Xnji8NjH8PZfgTDhNm-PjsZ7lcpwN0jBGBgmVQhS3
+Content-Type: application/json
+
+{
+  "vehicleType": "SUV",
+  "budget": 5000,
+  "durationInDays": 3
 }

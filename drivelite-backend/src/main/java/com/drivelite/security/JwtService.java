@@ -25,6 +25,8 @@ public class JwtService {
 
     private SecretKey getSigningKey(){
 
+        System.out.println("JWT SECRET USED: " + secret);
+
         return Keys.hmacShaKeyFor(
                 secret.getBytes()
         );

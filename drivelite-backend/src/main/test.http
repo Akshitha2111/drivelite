@@ -24,3 +24,6 @@ Content-Type: application/json
   "email": "seelamakshitha01@gmail.com",
   "password": "Girish@110108"
 }
+
+###
+POST http://localhost:8080/auth/login
