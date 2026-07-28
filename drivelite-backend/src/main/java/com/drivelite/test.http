@@ -719,7 +719,14 @@ Content-Type: application/json
   "phone": "9876543210",
   "password": "password123"
 }
+###
+POST https://drivelite-backend.onrender.com/auth/login
+Content-Type: application/json
 
+{
+  "email": "test2@drivelite.com",
+  "password": "test12345"
+}
 ###
 POST http://localhost:8080/auth/login
 Content-Type: application/json
@@ -738,4 +745,15 @@ Content-Type: application/json
   "vehicleType": "SUV",
   "budget": 5000,
   "durationInDays": 3
+}
+###
+POST https://drivelite-backend.onrender.com/ai/recommend
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0MkBkcml2ZWxpdGUuY29tIiwiaWF0IjoxNzg1MjU0NzY5LCJleHAiOjE3ODUzNDExNjl9.df3ACupUbY7p1JjyP9SELtlbT7AJG-Apc7mtFdFmwNjSu6Iq4qbpq55jO-XKaC79
+Content-Type: application/json
+
+{
+  "vehicleType": "SUV",
+  "budget": 5000,
+  "durationInDays": 3,
+  "purpose": "family"
 }
