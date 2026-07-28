@@ -21,6 +21,13 @@ https://drivelite-backend.onrender.com
 AI Service:
 https://drivelite-ai-service.onrender.com
 
+
+## 🎥 Project Demo
+
+Watch the project demonstration here:
+
+[▶️ DriveLite Demo Video](demo/drivelite-demo.mp4)
+
 ---
 
 # Features
