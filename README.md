@@ -94,6 +94,54 @@ https://drivelite-ai-service.onrender.com
                         (Flask + ML Model)
 
 
+## API Documentation
+
+### Authentication APIs
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/auth/register` | Register a new user |
+| POST | `/auth/login` | Login user and generate JWT token |
+
+---
+
+### Vehicle APIs
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/vehicles` | Get all available vehicles |
+| GET | `/vehicles/{id}` | Get vehicle by ID |
+| POST | `/vehicles` | Add new vehicle (Admin) |
+| PUT | `/vehicles/{id}` | Update vehicle details |
+| DELETE | `/vehicles/{id}` | Delete vehicle |
+
+---
+
+### Booking APIs
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/bookings` | Create a vehicle booking |
+| GET | `/bookings/my` | View user's bookings |
+| PUT | `/bookings/{id}/cancel` | Cancel booking |
+
+---
+
+### AI Recommendation API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/ai/recommend` | Get AI-based vehicle recommendations |
+
+Example Request:
+
+```json
+{
+  "budget": 500,
+  "vehicleType": "Scooter",
+  "duration": 3,
+  "purpose": "Daily commute"
+}
 ---
 
 # AI Recommendation Flow
